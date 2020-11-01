@@ -20,6 +20,9 @@ module.exports = {
     'react',
     '@typescript-eslint',
   ],
+  globals: {
+    React: 'writable',
+  },
   rules: {
     'linebreak-style': 'off',
     'react/jsx-filename-extension': 'off',
@@ -29,7 +32,11 @@ module.exports = {
     'react/prop-types': 'off',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
     camelcase: 'off',
     'max-len': ['error', { code: 140 }],
+    'object-curly-newline': ['error', {
+      ObjectPattern: { multiline: true, minProperties: 8 },
+    }],
   },
 };

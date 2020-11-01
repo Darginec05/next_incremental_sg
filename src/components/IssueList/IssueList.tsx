@@ -11,11 +11,10 @@ const IssueList: React.VFC<IssueListProps> = ({ issues }): ReactElement => (
     <br />
     <div>
       {issues.map((issue) => (
-        <Link key={issue.id} href="/issues/[issue_id]" as={`/issues/${issue.id}`}>
+        <Link key={issue.id} href="/issues/[issue_id]" as={`/issues/${issue.number}`}>
           <a>
             <div>{issue.title}</div>
             <div>{issue.body}</div>
-            <div>{issue.url}</div>
             <hr />
             <br />
           </a>
